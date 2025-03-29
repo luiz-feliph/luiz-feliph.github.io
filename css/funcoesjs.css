@@ -1,0 +1,10 @@
+.js .js-view {
+  opacity: 0;
+  transform: matrix3d(-50px, 0, 0);
+  transition: .4s;
+}
+
+.js .js-view.ativo {
+  opacity: 1;
+  transform: matrix3d(0, 0, 0);
+}

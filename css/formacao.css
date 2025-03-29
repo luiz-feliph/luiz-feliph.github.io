@@ -36,6 +36,8 @@
   max-width: 40ch;
   margin-bottom: 60px;
   color: #525252;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .formacao-texto strong {

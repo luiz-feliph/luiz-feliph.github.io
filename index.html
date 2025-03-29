@@ -7,14 +7,17 @@
   <title>Luiz Felipe | Desenvolvedor Front-end</title>
   <meta name="description" content="Desenvolvedor Front End, localizado em Sergipe.">
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="icon" href="./favicon2.0.svg" type="image/svg+xml">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <script>
+    document.documentElement.className += ' js';
+  </script>
 </head>
 
 <body>
   <header class="header">
     <img src="./img/Luiz Felipe.svg" alt="Luiz Felipe" width="309px" height="70px">
     <nav>
-      <ul class="header-menu">
+      <ul class="header-menu js-menu">
         <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#formacao">Formação</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -22,7 +25,7 @@
     </nav>
   </header>
 
-  <main class="container introducao">
+  <main class="container introducao js-view">
     <img src="./img/moldura-felipe.png" alt="Luiz Felipe" width="309" height="412">
     <div>
       <h1>Desenvolvedor <br> Front End</h1>
@@ -30,7 +33,7 @@
     </div>
   </main>
 
-  <section class="container experiencia" id="experiencia" aria-label="Experiência">
+  <section class="container experiencia js-view" id="experiencia" aria-label="Experiência">
     <h2 class="subtitulo">Experiência</h2>
     <div>
       <p class="experiencia-texto">Desenvolvo pequenos projetos como o <em>Progressive Web App</em> <strong>(PWA)</strong> da Bateria de Avaliação do Risco de Quedas <strong>(BARQ)</strong> utilizando <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>TypeScript</strong> e o framework <strong>Angular</strong>.</p>
@@ -39,7 +42,7 @@
         <span class="empresa-ano">2024-2025</span>
         <h3 class="empresa-titulo">UNIT | Iniciação Científica</h3>
         <span class="empresa-titulo">Bolsista</span>
-        <p class="empresa-texto">Neste projeto, meu objetivo foi transformar a <strong>BARQ</strong>, anteriormente disponibilizada como um PDF, em uma <strong><em>Progressive Web App</em> (PWA)</strong>. Essa mudança foi realizada a fimfacilitar o acesso e o uso da ferramenta por profissionais da saúde, pesquisadores e o público em geral.</p>
+        <p class="empresa-texto">Neste projeto, meu objetivo foi transformar a <strong>BARQ</strong>, anteriormente disponibilizada como um PDF, em uma <strong><em>Progressive Web App</em> (PWA)</strong>. Essa mudança foi realizada a fim de facilitar o acesso e o uso da ferramenta por profissionais da saúde, pesquisadores e o público em geral.</p>
         <ul class="empresa-habilidades">
           <li>HTML</li>
           <li>CSS</li>
@@ -51,7 +54,7 @@
   </section>
 
   <section class="formacao" id="formacao" aria-label="Formação">
-    <div class="formacao-container">
+    <div class="formacao-container js-view">
       <h2 class="subtitulo">Formação</h2>
 
       <div>
@@ -92,7 +95,7 @@
   </section>
 
   <footer class="footer" id="contato">
-    <div class="footer-container">
+    <div class="footer-container js-view">
       <p class="footer-texto">Atualmente, estou disponível para novos projetos. Fique à vontade para entrar em contato, e podemos agendar uma conversa.</p>
       <ul class="footer-contato">
         <li>
@@ -108,10 +111,11 @@
           <a href="https://www.linkedin.com/in/luiz-felipe-sm">Linkedin</a>
         </li>
       </ul>
-      <p class="footer-copy">Luiz Felipe. Alguns direitos reservados.</p>
+      <p class="footer-creditos">Desenvolvido por <a href="https://github.com/luiz-feliph" target="_blank">Luiz Felipe</a> | Portfólio pessoal</p>
     </div>
   </footer>
 
+  <script src="./script.js"></script>
 </body>
 
 </html>

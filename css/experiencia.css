@@ -8,6 +8,8 @@
   line-height: 1.33;
   max-width: 40ch;
   margin-bottom: 60px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .experiencia-texto strong {
@@ -53,6 +55,8 @@
   font-size: 0.875rem;
   color: #f3f3f3;
   line-height: 1.4;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .empresa-habilidades {
