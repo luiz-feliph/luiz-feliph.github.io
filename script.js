@@ -59,3 +59,40 @@ linksInternos.forEach((link) => {
     checkbox.click()
   }))
 })
+
+const textoElemento = document.querySelector(".texto-dinamico"),
+textos = [
+    "Localizado em Itabaiana, Sergipe",
+    "Código limpo e interfaces modernas",
+    "Dev Full Stack focado em eficiência",
+]
+
+
+let indexTexto = 0,
+indexLetra = 0;
+
+function escreverTexto() {
+  const textoAtual = textos[indexTexto]
+
+  if (indexLetra < textoAtual.length) {
+    textoElemento.innerHTML += textoAtual[indexLetra]
+    indexLetra++
+    setTimeout(escreverTexto, 100)
+  } else {
+    setTimeout(apagarTexto, 2000)
+  }
+}
+
+function apagarTexto() {
+  const textoAtual = textos[indexTexto]
+  if (indexLetra > 0) {
+    textoElemento.innerHTML = textoAtual.slice(0, indexLetra - 1)
+    indexLetra--
+    setTimeout(apagarTexto, 80)
+  } else {
+    if (indexTexto < 2) indexTexto++
+    else indexTexto = 0
+    setTimeout(escreverTexto, 1000)
+  }
+}
+setTimeout(escreverTexto, 1000)

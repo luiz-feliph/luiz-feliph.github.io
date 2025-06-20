@@ -40,6 +40,12 @@
   hyphens: auto;
 }
 
+.formacao-texto span {
+  font-weight: bold;
+  color: #BB9754;
+  letter-spacing: 1px;
+}
+
 .formacao-texto strong {
   color: #000;
 }
