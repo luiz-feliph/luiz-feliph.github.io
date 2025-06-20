@@ -1,5 +1,5 @@
-function initScrollSmooth() {
 const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]')
+function initScrollSmooth() {
 
 function scrollToSection(event) {
   event.preventDefault()
@@ -9,6 +9,15 @@ function scrollToSection(event) {
     behavior: 'smooth',
     block: 'start',
   })
+
+  if (window.innerWidth <= 850) {
+    const offsetTop = section.offsetTop - 80
+
+    window.scrollTo({
+     top: offsetTop,
+     behavior: 'smooth',
+  })
+  }
 }
 
 linksInternos.forEach((link) => {
@@ -36,3 +45,17 @@ animationView()
 window.addEventListener('scroll', animationView)
 }
 initAnimationView()
+
+const menu = document.querySelector(".menu-area"),
+checkbox = document.getElementById("menu"),
+menuOptions = document.querySelector(".header-menu")
+
+menu.addEventListener("click", (() => {
+  menuOptions.classList.toggle("visivel")
+}))
+
+linksInternos.forEach((link) => {
+  link.addEventListener('click', (() => {
+    checkbox.click()
+  }))
+})
