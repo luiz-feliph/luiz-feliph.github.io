@@ -29,18 +29,11 @@
   display: block;
 }
 
-.menu-area {
+.menu-icon {
   display: none;
+  cursor: pointer;
 }
 
-#menu {
-  all: unset;
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
-  z-index: 3;
-  -webkit-tap-highlight-color: transparent;
-}
 
 @media (max-width: 850px) {
   .header {
@@ -55,9 +48,42 @@
   #logo {
     width: 150px;
   }
-  .menu-area {
-    display: block;
-    cursor: pointer;
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-icon .linha {
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    transition: .5s;
+
+  }
+
+  .menu-icon.ativo {
+    gap: 0;
+  }
+  
+  .menu-icon.ativo .linha:first-child {
+    transform: translateY(5px) rotate(45deg);
+    background-color: #D50032;
+  }
+
+  .menu-icon.ativo .linha:nth-child(2) {
+    opacity: 0;
+    transition: .3s;
+  }
+
+  .menu-icon.ativo .linha:last-child {
+    transform: translateY(-3px) rotate(-45deg);
+    background-color: #D50032;
   }
 
   .header-menu {
@@ -79,8 +105,8 @@
     margin-left: 10px;
   }
 
-  .visivel {
-    width: 200px !important;
+  .header-menu.visivel {
+    width: 200px;
   }
 
   #icon-menu-close {

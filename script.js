@@ -46,17 +46,17 @@ window.addEventListener('scroll', animationView)
 }
 initAnimationView()
 
-const menu = document.querySelector(".menu-area"),
-checkbox = document.getElementById("menu"),
+const menu = document.querySelector(".menu-icon"),
 menuOptions = document.querySelector(".header-menu")
 
-menu.addEventListener("click", (() => {
+menu.addEventListener("click", ((e) => {
   menuOptions.classList.toggle("visivel")
+  e.currentTarget.classList.toggle("ativo")
 }))
 
 linksInternos.forEach((link) => {
   link.addEventListener('click', (() => {
-    checkbox.click()
+    menu.click()
   }))
 })
 
