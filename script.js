@@ -64,7 +64,7 @@ const textoElemento = document.querySelector(".texto-dinamico"),
 textos = [
     "Localizado em Itabaiana, Sergipe",
     "Código limpo e interfaces modernas",
-    "Dev Full Stack focado em eficiência",
+    "Dev Front-end focado em eficiência",
 ]
 
 
